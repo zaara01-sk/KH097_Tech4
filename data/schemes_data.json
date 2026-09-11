@@ -1,0 +1,135 @@
+[
+  {
+    "id": "PM_KISAN",
+    "name": "PM Kisan Samman Nidhi",
+    "category": "Direct Income Support",
+    "benefit_type": "Direct Benefit Transfer (Cash)",
+    "annual_benefit_inr": 6000,
+    "description": "Financial benefit of ₹6,000 per year in three equal installments to cultivable landholding farmer families.",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 75,
+      "occupations": ["Farmer"],
+      "owns_land": true,
+      "taxpayer": false
+    },
+    "conflicts_with": [],
+    "required_docs": [
+      "Aadhaar Card",
+      "Bank Passbook",
+      "Land Ownership Proof (ROR)"
+    ]
+  },
+  {
+    "id": "PM_SYM",
+    "name": "PM Shram Yogi Maan-Dhan (PM-SYM)",
+    "category": "Pension & Social Security",
+    "benefit_type": "Contributory Old Age Pension",
+    "annual_benefit_inr": 36000,
+    "description": "Assures a monthly pension of ₹3,000 upon reaching age 60 for unorganized sector workers.",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 40,
+      "max_annual_income": 180000,
+      "occupations": ["Unorganized Worker", "Street Vendor", "Daily Wage Earner", "Artisan"],
+      "enrolled_in_epfo_esic": false,
+      "taxpayer": false
+    },
+    "conflicts_with": ["APY"],
+    "required_docs": [
+      "Aadhaar Card",
+      "Savings Bank Account / Jan Dhan Account"
+    ]
+  },
+  {
+    "id": "APY",
+    "name": "Atal Pension Yojana (APY)",
+    "category": "Pension & Social Security",
+    "benefit_type": "Guaranteed Monthly Pension",
+    "annual_benefit_inr": 60000,
+    "description": "Guaranteed minimum monthly pension ranging from ₹1,000 to ₹5,000 starting from age 60.",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 40,
+      "taxpayer": false
+    },
+    "conflicts_with": ["PM_SYM"],
+    "required_docs": [
+      "Aadhaar Card",
+      "Bank Account"
+    ]
+  },
+  {
+    "id": "PM_SVANIDHI",
+    "name": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
+    "category": "Micro-Credit & Livelihood",
+    "benefit_type": "Working Capital Loan & Subsidy",
+    "annual_benefit_inr": 20000,
+    "description": "Collateral-free working capital micro-credit with interest subsidy for urban street vendors.",
+    "eligibility": {
+      "min_age": 18,
+      "occupations": ["Street Vendor"],
+      "max_annual_income": 300000
+    },
+    "conflicts_with": [],
+    "required_docs": [
+      "Aadhaar Card",
+      "Vending Certificate / Urban Local Body ID Card",
+      "Bank Passbook"
+    ]
+  },
+  {
+    "id": "PMJAY",
+    "name": "Ayushman Bharat — PM-JAY",
+    "category": "Healthcare",
+    "benefit_type": "Secondary & Tertiary Health Coverage",
+    "annual_benefit_inr": 500000,
+    "description": "Health coverage up to ₹5,00,000 per family per year for secondary and tertiary hospital care.",
+    "eligibility": {
+      "max_annual_income": 250000,
+      "enrolled_in_epfo_esic": false
+    },
+    "conflicts_with": [],
+    "required_docs": [
+      "Aadhaar Card",
+      "Ration Card",
+      "SECC Inclusion Certificate"
+    ]
+  },
+  {
+    "id": "PMAY_G",
+    "name": "Pradhan Mantri Awaas Yojana (Gramin)",
+    "category": "Housing Assistance",
+    "benefit_type": "Direct Construction Assistance",
+    "annual_benefit_inr": 120000,
+    "description": "Financial grant of ₹1,20,000 for families living in kutcha or dilapidated houses.",
+    "eligibility": {
+      "max_annual_income": 150000,
+      "owns_pucca_house": false
+    },
+    "conflicts_with": [],
+    "required_docs": [
+      "Aadhaar Card",
+      "Bank Passbook",
+      "MGNREGA Job Card",
+      "Certificate of Kutcha House"
+    ]
+  },
+  {
+    "id": "PMSBY",
+    "name": "PM Suraksha Bima Yojana",
+    "category": "Accident Insurance",
+    "benefit_type": "Accidental Death & Disability Cover",
+    "annual_benefit_inr": 200000,
+    "description": "Annual accidental death and disability coverage of ₹2,00,000 for a nominal annual premium.",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 70
+    },
+    "conflicts_with": [],
+    "required_docs": [
+      "Aadhaar Card",
+      "Bank Account"
+    ]
+  }
+]
