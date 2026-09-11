@@ -1,10 +1,13 @@
 import os
+from dotenv import load_dotenv
 from typing import Dict, Any
 from groq import Groq
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from rag.vector_store import SchemeKnowledgeBase
+
+load_dotenv()
 
 SYSTEM_PROMPT = """You are "MaxLabh Sahayak", an expert public policy and citizen welfare advisor.
 Your mission is to help citizens understand Indian government welfare schemes, entitlements, documentation requirements, and conflict-resolution rules.
