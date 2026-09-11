@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from core.engine import SchemeEngine
 from pipeline import OptimizationPipeline, RAGPipeline
@@ -21,11 +22,14 @@ st.set_page_config(
 
 apply_custom_styles()
 
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DATA_PATH = os.path.join(BASE_DIR, "data", "schemes_data_converted.json")
+
 @st.cache_resource
 def get_pipelines():
-    engine = SchemeEngine("data/schemes_data.json")
+    engine = SchemeEngine(DATA_PATH)
     opt_pipeline = OptimizationPipeline(engine)
-    rag_pipeline = RAGPipeline("data/schemes_data.json")
+    rag_pipeline = RAGPipeline(DATA_PATH)
     return opt_pipeline, rag_pipeline
 
 optimizer_pipe, rag_pipe = get_pipelines()
